@@ -1213,7 +1213,7 @@ export function PlaceList(props: any) {
           <li>
             <button
               onClick={() => {
-                if(!document) return;
+                if(document == null) return;
                 const mainh = document.querySelector("main").scrollHeight;
                 const sleepH = document.querySelector(".sleep").scrollHeight;
                 const offersH = document.querySelector(".offers").scrollHeight;
@@ -1229,7 +1229,7 @@ export function PlaceList(props: any) {
           <li>
             <button
               onClick={() => {
-                if(!document) return;
+                if(document == null) return;
                 const mainh = document.querySelector("main").scrollHeight;
                 window.scrollTo({
                   top: mainh + 25,
