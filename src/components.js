@@ -16,13 +16,8 @@ import dynamic from 'next/dynamic'
 // const Marker = dynamic(() => import('react-leaflet/lib/Marker'), {ssr: false});
 // import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 
-type AppProps = {
-  setMore: Function;
-  more: any;
-};
-
-export function MoreContent({ setMore, more }: AppProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
+export function MoreContent({ setMore, more }) {
+  const ref = useRef(null);
 
   useEffect(() => {
     if (more) {
@@ -1030,7 +1025,7 @@ const More = () => (
   </div>
 );
 
-export function MoreBg({ setMore, more }: AppProps) {
+export function MoreBg({ setMore, more }) {
   return (
     <div
       className={`morebg ${more && "active"}`}
@@ -1039,7 +1034,7 @@ export function MoreBg({ setMore, more }: AppProps) {
   );
 }
 
-export function OffsersList({ setMore }: AppProps) {
+export function OffsersList({ setMore }) {
   return (
     <ul>
       <li>
@@ -1193,7 +1188,7 @@ export const DateView = () => {
   );
 };
 
-export function PlaceList(props: any) {
+export function PlaceList(props) {
   return (
     <div className={`headerlist ${props.className}`}>
       <div className="content">
