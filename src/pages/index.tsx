@@ -47,6 +47,7 @@ function DownSide(props) {
               <li
                 className={obj.title == propertyType && "active"}
                 onClick={() => setPropertyType(obj.title)}
+                key={obj.imageUrl}
               >
                 <Image alt="" src={obj.imageUrl} width={24} height={24} />
                 <p>{obj.title}</p>
@@ -210,7 +211,7 @@ const Home = ({ data }) => {
                       >
                         {result.listing.contextualPictures.map((picture) => {
                           return (
-                            <SwiperSlide>
+                            <SwiperSlide key={picture.id}>
                               <Image
                                 src={picture.picture}
                                 width={500}
