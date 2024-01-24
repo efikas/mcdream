@@ -185,7 +185,7 @@ const Home = ({ data }) => {
           {data.sections.sectionIndependentData.staysSearch.searchResults.map(
             (result) => {
               return (
-                <li>
+                <li key={linkNormalizer(result.listing.name)}>
                   <Link 
                    href={`/${linkNormalizer(result.listing.name)}`}
                   // onClick={(ev) => {

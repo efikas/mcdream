@@ -180,7 +180,7 @@ const Page = ({ data }) => {
                 </div>
                 <ul className="right">
                   {[1, 2, 3, 4].map((i) => (
-                    <li>
+                    <li key={i}>
                       <Image
                         alt=""
                         className={i % 2 && "l"}
