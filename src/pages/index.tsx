@@ -42,12 +42,12 @@ function DownSide(props) {
           </span>
         )} */}
         <ul className="center" ref={listRef} onScroll={onScroll}>
-          {props.filterItems.map((obj) => {
+          {props.filterItems.map((obj, index) => {
             return (
               <li
                 className={obj.title == propertyType && "active"}
                 onClick={() => setPropertyType(obj.title)}
-                key={obj.imageUrl}
+                key={index}
               >
                 <Image alt="" src={obj.imageUrl} width={24} height={24} />
                 <p>{obj.title}</p>
@@ -184,9 +184,9 @@ const Home = ({ data }) => {
         </header>
         <ul className="items">
           {data.sections.sectionIndependentData.staysSearch.searchResults.map(
-            (result) => {
+            (result, index) => {
               return (
-                <li key={linkNormalizer(result.listing.name)}>
+                <li key={index}>
                   <Link 
                    href={`/${linkNormalizer(result.listing.name)}`}
                   // onClick={(ev) => {
@@ -209,9 +209,9 @@ const Home = ({ data }) => {
                         }}
                         allowTouchMove={false}
                       >
-                        {result.listing.contextualPictures.map((picture) => {
+                        {result.listing.contextualPictures.map((picture, _index) => {
                           return (
-                            <SwiperSlide key={picture.id}>
+                            <SwiperSlide key={_index}>
                               <Image
                                 src={picture.picture}
                                 width={500}
