@@ -64,7 +64,7 @@ const Page = ({ data }) => {
   const [appartmentInfo, setAppartmentInfo] = useState({});
   const [loading, setLoading] = useState(true);
 
-  const linkNormalizer = (url: String) => {
+  const linkNormalizer = (url) => {
     if (!url) return "";
     var link = url.toLowerCase();
     link = link.replaceAll("-", " ");
@@ -75,7 +75,7 @@ const Page = ({ data }) => {
   const getAppartment = () => {
     let vals = data.homedata.sections.sectionIndependentData.staysSearch.searchResults || [];
 
-    let sle = vals.filter((data: any) => (linkNormalizer(params.id.toString()) == linkNormalizer(data.listing.name.toString())));
+    let sle = vals.filter((data) => (linkNormalizer(params.id.toString()) == linkNormalizer(data.listing.name.toString())));
     if(sle.length > 0){
       setAppartmentInfo(sle[0]);
     }

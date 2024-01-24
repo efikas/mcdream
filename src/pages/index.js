@@ -93,7 +93,7 @@ const Home = ({ data }) => {
   const [isSearch, setIsSearch] = useState(false);
   
 
-  const linkNormalizer = (url: String) => {
+  const linkNormalizer = (url) => {
     if (!url) return "";
     var link = url.toLowerCase();
     link = link.replaceAll(" ", "-");
