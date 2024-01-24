@@ -27,7 +27,7 @@ export function MoreContent({ setMore, more }: AppProps) {
   useEffect(() => {
     if (more) {
       document.body.style.overflow = "hidden";
-      if (ref != null) {
+      if (ref && ref.current) {
         ref.current.scroll({ top: 0 });
       }
     } else {
