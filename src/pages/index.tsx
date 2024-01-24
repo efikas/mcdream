@@ -45,9 +45,9 @@ function DownSide(props) {
           {props.filterItems.map((obj, index) => {
             return (
               <li
+              key={index}
                 className={obj.title == propertyType && "active"}
                 onClick={() => setPropertyType(obj.title)}
-                key={index}
               >
                 <Image alt="" src={obj.imageUrl} width={24} height={24} />
                 <p>{obj.title}</p>
