@@ -288,7 +288,7 @@ export const getServerSideProps = () =>
   fetch(
     (process.env.NODE_ENV === "production"
       ? process.env.URL
-      : "http://localhost:3000") +
+      : process.env.LOCAL_URL) +
       "/api" +
       "/home",
     {

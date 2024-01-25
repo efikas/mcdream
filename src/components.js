@@ -961,7 +961,7 @@ const More = () => (
       upper ground, you can ask him almost anything you need to make your stay
       enjoyable. He will help you with breakfast, food for lunch and dinner,
       find a masseur, room cleaning, laundry, transportation, area information,
-      and tourist activities. You can also contact us online through Airbnb
+      and tourist activities. You can also contact us online through MCDream
       platform in case the onsite services do not meet your needs.
     </p>
     <br />
@@ -1309,7 +1309,7 @@ export const Footer = () => (
           <li>Canggu Beach</li>
           <li>Ubud</li>
         </ul>
-        <h2>Other types of stays on Airbnb</h2>
+        <h2>Other types of stays on MCDream</h2>
         <ul>
           <li>Sidemen vacation rentals</li>
           <li>Sidemen monthly stays</li>
@@ -1334,20 +1334,20 @@ export const Footer = () => (
           </ul>
           <ul className="s">
             <li>Community</li>
-            <li>Airbnb.org: disaster relief housing</li>
+            <li>MCDream: disaster relief housing</li>
             <li>Combating discrimination</li>
           </ul>
           <ul className="s">
             <li>Hosting</li>
-            <li>Airbnb your home</li>
+            <li>MCDream your home</li>
             <li>AirCover for Hosts</li>
             <li>Explore hosting resources</li>
             <li>Visit our community forum</li>
             <li>How to host responsibly</li>
-            <li>Airbnb-friendly apartments</li>
+            <li>MCDream-friendly apartments</li>
           </ul>
           <ul>
-            <li>Airbnb</li>
+            <li>MCDream</li>
             <li>Newsroom</li>
             <li>Learn about new features</li>
             <li>Letter from our founders</li>
@@ -1356,7 +1356,7 @@ export const Footer = () => (
             <li>Gift cards</li>
           </ul>
         </ul>
-        <p className="xd">© 2023 Airbnb, Inc</p>
+        <p className="xd">© 2024 MCDream, Inc</p>
       </div>
     </div>
   </footer>

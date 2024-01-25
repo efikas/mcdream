@@ -173,7 +173,7 @@ const Page = ({ data }) => {
                   <Image
                     width={1200}
                     height={750}
-                    src={images[0].baseUrl}
+                    src={appartmentInfo.listing.contextualPictures[0].picture}
                     quality={100}
                   />
                   <div className="layer"></div>
@@ -186,22 +186,22 @@ const Page = ({ data }) => {
                         className={i % 2 && "l"}
                         width={1200}
                         height={750}
-                        src={images[i].baseUrl}
+                        src={appartmentInfo.listing.contextualPictures[i].picture}
                       />
                       <div className="layer"></div>
                     </li>
                   ))}
                 </ul>
-                <button>
+                {/* <button>
                   <All />
                   <p>Show all photos</p>
-                </button>
+                </button> */}
               </div>
             </section>
             <section className="body">
               <div className="left">
                 <div className="container1">
-                  <h1>Treehouse hosted by Veluvana</h1>
+                  <h1>{appartmentInfo.listing.name}</h1>
                   <p>
                     2 guests <span> · </span>1 bedroom<span> · </span>1 bed
                     <span> · </span>1.5 baths
@@ -483,7 +483,7 @@ export const getServerSideProps = () =>
   fetch(
     (process.env.NODE_ENV === "production"
       ? process.env.URL
-      : "http://localhost:3000") +
+      : process.env.LOCAL_URL) +
       "/api" +
       "/place",
     {
